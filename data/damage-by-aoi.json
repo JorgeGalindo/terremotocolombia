@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "code": "EMSR916",
+    "fetchedAt": "2026-08-11T06:57:56.168Z",
+    "gradeOrder": [
+      "Destroyed",
+      "Damaged",
+      "Possibly damaged",
+      "Negligible to slight damage",
+      "Not Applicable"
+    ],
+    "note": "Conteos edificio a edificio del campo `damage_gra` (Grading). 'affected' = todo lo distinto de Not Applicable."
+  },
+  "totals": {},
+  "aois": []
+}

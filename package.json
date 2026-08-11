@@ -1,0 +1,14 @@
+{
+  "name": "terremotocolombia",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Microsite que cuantifica la afectación del terremoto de Colombia (10-ago-2026, Mw 7,4, Chocó) con datos de Copernicus EMS (EMSR916) + capas adicionales.",
+  "scripts": {
+    "dev": "python3 -m http.server 5176",
+    "fetch:copernicus": "node scripts/fetch-emsr916.mjs",
+    "fetch:buildings": "node scripts/fetch-buildings.mjs",
+    "fetch:all": "npm run fetch:copernicus && npm run fetch:buildings",
+    "og": "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=1200,630 --virtual-time-budget=4000 --screenshot=og.png \"file://$PWD/scripts/og-template.html\""
+  }
+}

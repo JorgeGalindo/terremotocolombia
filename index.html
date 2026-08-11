@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terremoto Colombia — datos de afectación</title>
+  <meta name="description" content="Datos de afectación del terremoto de Colombia (10-ago-2026, Mw 7,4, Chocó): edificios dañados según Copernicus EMS (EMSR916) y exposición sísmica." />
+
+  <!-- Open Graph / WhatsApp / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://terremotocolombia.vercel.app/" />
+  <meta property="og:title" content="Terremoto Colombia — datos de afectación" />
+  <meta property="og:description" content="Edificios dañados según Copernicus EMS (EMSR916) y exposición sísmica del terremoto del 10 de agosto de 2026." />
+  <meta property="og:image" content="https://terremotocolombia.vercel.app/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Terremoto Colombia — datos de afectación" />
+  <meta name="twitter:description" content="Edificios dañados según Copernicus EMS (EMSR916) y exposición sísmica del terremoto del 10 de agosto de 2026." />
+  <meta name="twitter:image" content="https://terremotocolombia.vercel.app/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="kicker">// Copernicus EMS · Activación EMSR916</p>
+    <h1>Terremoto Colombia</h1>
+    <p class="tagline">datos de afectación</p>
+    <p class="updated-sub" id="updated-sub"></p>
+    <!-- Las pestañas se reactivarán cuando esté decidido el contenido de la v1
+         (ver 01-entendimiento.md). De momento solo la capa de Copernicus. -->
+    <nav class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="edificios" role="tab">Edificios</button>
+    </nav>
+  </header>
+
+  <!-- ============ PESTAÑA: EDIFICIOS ============ -->
+  <div class="panel is-active" id="panel-edificios" role="tabpanel">
+    <section class="totals" id="totals" aria-label="Totales de daño">
+      <!-- contadores inyectados por JS -->
+    </section>
+    <p class="totals-note" id="totals-note"></p>
+
+    <p class="coverage" id="coverage"></p>
+
+    <section class="map-wrap">
+      <div id="map"></div>
+      <div class="legend" id="legend"></div>
+    </section>
+
+    <section class="aois">
+      <h2>// Daño por zona</h2>
+      <p class="aois-intro">Pulsa una zona para verla en el mapa.</p>
+      <div class="aoi-grid" id="aoi-grid"></div>
+    </section>
+
+    <footer class="foot">
+      <p><strong>Fuente:</strong> <a href="https://mapping.emergency.copernicus.eu/activations/EMSR916/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping — EMSR916</a>. Datos satelitales ópticos y SAR.</p>
+      <p class="disclaimer">El daño es una <strong>estimación-proxy</strong> derivada de imagen satelital, no verdad de campo. La capa solo recoge edificios afectados, no el parque completo. <span id="updated"></span></p>
+    </footer>
+  </div>
+
+  <footer class="credit">
+    <p>cc <strong>Jorge Galindo</strong> · 2026 — datos abiertos de Copernicus EMS y USGS.</p>
+    <p class="credit-sub">Reutilizable citando la fuente. <a href="https://github.com/JorgeGalindo/terremotocolombia" target="_blank" rel="noopener">Código y datos en GitHub ↗</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
