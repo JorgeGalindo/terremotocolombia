@@ -1,11 +1,17 @@
 name: Actualizar datos
 
-# A diario: regenera los datos de Copernicus EMS (activación EMSR916, terremoto
-# de Colombia del 10-ago-2026). Si algo cambia, hace commit; la integración Git
-# de Vercel redesplega sola.
+# A diario: regenera las dos capas de datos del terremoto de Colombia
+# (10-ago-2026, EMSR916). Si algo cambia, hace commit; la integración Git de
+# Vercel redesplega sola.
 #
-# Sin dependencias npm y sin ninguna API de pago: los scripts usan solo builtins
-# de Node contra el backend público de Copernicus.
+#   1. Copernicus EMS  → daño observado, cuando la activación entregue productos.
+#   2. USGS × DANE     → sacudida modelada cruzada con déficit habitacional.
+#      Importante: las URLs de producto del USGS van versionadas y se resuelven
+#      siempre desde el feed de detalle, así que el ShakeMap se refresca solo
+#      cuando el USGS revisa el evento (hoy sigue en 'automatic').
+#
+# Sin dependencias npm y sin ninguna API de pago: solo builtins de Node contra
+# backends públicos.
 on:
   schedule:
     - cron: "0 6 * * *" # 06:00 UTC cada día
@@ -28,7 +34,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: Regenerar datos Copernicus (EMSR916)
+      - name: Regenerar datos (Copernicus + USGS×DANE)
         run: npm run fetch:all
 
       - name: Commit y push si hay cambios

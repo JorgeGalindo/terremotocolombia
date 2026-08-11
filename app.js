@@ -1,5 +1,8 @@
-// Terremoto de Colombia — microsite. Carga los datos de Copernicus EMSR916
-// y pinta contadores + mapa de edificios coloreados por grado de daño.
+// Terremoto de Colombia — microsite.
+//   Pestaña Exposición: sacudida modelada (USGS) × déficit habitacional (DANE).
+//   Pestaña Edificios:  daño observado por Copernicus EMS (EMSR916).
+
+import { renderExposicion, addExposicion } from "./exposicion.js";
 
 const GRADE_COLORS = {
   Destroyed: "#ff4d2e",
@@ -314,12 +317,12 @@ function darkBrownStyle() {
   };
 }
 
-function initMap() {
+function initMap(container = "map", center = [-76.0, 4.6], zoom = 6.6) {
   return new maplibregl.Map({
-    container: "map",
+    container,
     style: darkBrownStyle(),
-    center: [-67.6, 10.4],
-    zoom: 6.4,
+    center,
+    zoom,
     attributionControl: { compact: true },
   });
 }
@@ -421,23 +424,40 @@ function boundsOf(features) {
 
 // ---- Arranque ----
 (async function main() {
+  // (1) Capa vertebral: sacudida × vulnerabilidad. Disponible desde el día uno.
+  let mapExp = null;
+  const exp = await loadJSON("data/exposicion.json");
+  renderExposicion(exp);
+  setUpdated(exp.meta.fetchedAt);
+  try {
+    mapExp = initMap("map-exp");
+    mapExp.on("load", () => {
+      try {
+        addExposicion(mapExp, exp);
+      } catch (e) {
+        console.error("Error añadiendo exposición al mapa:", e);
+      }
+    });
+  } catch (e) {
+    console.warn("Mapa de exposición no disponible (WebGL):", e.message);
+    document.getElementById("map-exp").style.display = "none";
+  }
+
+  // (2) Capa de daño observado (Copernicus EMSR916). Se llena cuando la
+  //     activación entregue productos; hasta entonces los contadores van a cero.
   const data = await loadJSON("data/damage-by-aoi.json");
   renderTotals(data);
   renderLegend();
   renderCoverage();
-  setUpdated(data.meta.fetchedAt);
-
-  // La segunda capa (personas) está desconectada hasta decidir el contenido de
-  // la v1 para Colombia. Las funciones de render (metricRow, lineChart,
-  // renderPersonas, renderPager) siguen aquí porque son reutilizables tal cual.
 
   // El mapa es best-effort: si WebGL falla, la página (contadores y tarjetas) sigue viva.
   let map = null;
   let ctx = null;
 
-  // Al volver a la pestaña Edificios, el mapa necesita recalcular tamaño.
+  // Al cambiar de pestaña, los mapas necesitan recalcular tamaño.
   setupTabs((name) => {
     if (name === "edificios" && map) setTimeout(() => map.resize(), 50);
+    if (name === "exposicion" && mapExp) setTimeout(() => mapExp.resize(), 50);
   });
 
   renderAoiCards(data, (slug) => {
@@ -466,6 +486,6 @@ function boundsOf(features) {
   }
 })().catch((e) => {
   console.error(e);
-  document.getElementById("totals").innerHTML =
-    `<p style="color:#b2182b">Error cargando los datos: ${e.message}</p>`;
+  const host = document.getElementById("exposicion") || document.getElementById("totals");
+  host.innerHTML = `<p style="color:var(--destroyed);padding:24px 0">Error cargando los datos: ${e.message}</p>`;
 });

@@ -7,13 +7,13 @@
     "activator": "EC Services|DG ECHO",
     "eventTime": "2026-08-10T12:30:00",
     "activationTime": "2026-08-10T17:13:00",
-    "gdacsId": "1557236",
+    "gdacsId": "EQ1557236",
     "charterNumber": "1048",
     "reportLink": "https://storymaps.arcgis.com/stories/faac12172e564e31b558b1dff08c91d6",
     "closed": false,
     "productsZip": "https://rapidmapping.emergency.copernicus.eu/backend/EMSR916/EMSR916_products.zip",
     "awsBucket": "https://rapidmapping-viewer.s3.eu-west-1.amazonaws.com",
-    "fetchedAt": "2026-08-11T06:57:51.755Z",
+    "fetchedAt": "2026-08-11T09:08:35.969Z",
     "source": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations/?code=EMSR916"
   },
   "totals": {

@@ -374,3 +374,141 @@ body {
   .legend { left: 32px; }
   .compare { grid-template-columns: 1fr; }
 }
+
+/* ================= Exposición: sacudida × vulnerabilidad ================= */
+.exposicion {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 8px 24px 0;
+}
+
+.lede { margin: 0 0 28px; }
+.hero-stat {
+  font-size: clamp(1.05rem, 2.4vw, 1.42rem);
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--ink);
+}
+.hero-stat strong { font-weight: 700; color: var(--possibly); }
+.hero-split {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.92em;
+}
+.hero-split strong { color: var(--damaged); }
+
+/* Rampa secuencial de déficit */
+.ramp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 14px;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.ramp .step { display: flex; align-items: center; gap: 6px; }
+.ramp .sw {
+  width: 26px; height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.ramp .sw.sm { width: 14px; height: 8px; margin-right: 6px; }
+.ramp-unit { color: var(--faint); letter-spacing: 0.03em; }
+
+/* Dispersión */
+.chart { position: relative; margin: 0 0 10px; }
+.chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.gridline { stroke: var(--line); stroke-width: 1; }
+.axis { stroke: var(--faint); stroke-width: 1; }
+.tick { fill: var(--faint); font-size: 11px; font-family: var(--mono); }
+.axtitle { fill: var(--muted); font-size: 11.5px; font-family: var(--mono); letter-spacing: 0.04em; }
+.pt { transition: fill-opacity 0.12s ease; cursor: pointer; }
+.pt:hover { fill-opacity: 1; stroke: var(--ink); }
+.pt.is-key { stroke: var(--bg); stroke-width: 2; }
+.ptlabel {
+  fill: var(--ink);
+  font-size: 11px;
+  font-family: var(--mono);
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.tip[hidden] { display: none; }
+.tip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 9px 11px;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.tip strong { color: var(--ink); font-size: 0.82rem; }
+.tip-sub { color: var(--faint); margin-bottom: 4px; }
+
+.chart-note {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 26px;
+}
+
+/* Tabla plegable */
+.tabla { margin: 0 0 30px; }
+.tabla summary {
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: var(--damaged);
+  letter-spacing: 0.03em;
+  padding: 8px 0;
+}
+.tabla table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.76rem; }
+.tabla th {
+  text-align: left;
+  color: var(--faint);
+  font-weight: 400;
+  border-bottom: 1px solid var(--line);
+  padding: 7px 8px;
+  letter-spacing: 0.03em;
+}
+.tabla td { padding: 6px 8px; border-bottom: 1px solid var(--bg2); color: var(--muted); }
+.tabla td:first-child { color: var(--ink); }
+.tabla .num { text-align: right; white-space: nowrap; }
+.tabla .sw { display: inline-block; width: 14px; height: 8px; border-radius: 2px; }
+
+#map-exp {
+  height: 520px;
+  width: 100%;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.maplibregl-popup.mp .maplibregl-popup-content {
+  background: var(--panel);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  padding: 9px 11px;
+}
+.maplibregl-popup.mp .maplibregl-popup-content strong { color: var(--ink); }
+.maplibregl-popup.mp .maplibregl-popup-tip { border-top-color: var(--line); }
+
+@media (max-width: 640px) {
+  .exposicion { padding: 8px 16px 0; }
+  #map-exp { height: 400px; }
+  .ptlabel { font-size: 13px; }
+}

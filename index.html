@@ -27,19 +27,27 @@
 </head>
 <body>
   <header class="hero">
-    <p class="kicker">// Copernicus EMS · Activación EMSR916</p>
+    <p class="kicker">// Mw 7,4 · 10-ago-2026 · San José del Palmar, Chocó</p>
     <h1>Terremoto Colombia</h1>
-    <p class="tagline">datos de afectación</p>
+    <p class="tagline">sacudida y vulnerabilidad</p>
     <p class="updated-sub" id="updated-sub"></p>
-    <!-- Las pestañas se reactivarán cuando esté decidido el contenido de la v1
-         (ver 01-entendimiento.md). De momento solo la capa de Copernicus. -->
     <nav class="tabs" role="tablist">
-      <button class="tab is-active" data-tab="edificios" role="tab">Edificios</button>
+      <button class="tab is-active" data-tab="exposicion" role="tab">Exposición</button>
+      <button class="tab" data-tab="edificios" role="tab">Edificios</button>
     </nav>
   </header>
 
+  <!-- ============ PESTAÑA: EXPOSICIÓN ============ -->
+  <div class="panel is-active" id="panel-exposicion" role="tabpanel">
+    <section class="exposicion" id="exposicion"></section>
+    <section class="map-wrap">
+      <div id="map-exp"></div>
+    </section>
+    <section class="exposicion" id="exposicion-foot"></section>
+  </div>
+
   <!-- ============ PESTAÑA: EDIFICIOS ============ -->
-  <div class="panel is-active" id="panel-edificios" role="tabpanel">
+  <div class="panel" id="panel-edificios" role="tabpanel">
     <section class="totals" id="totals" aria-label="Totales de daño">
       <!-- contadores inyectados por JS -->
     </section>
