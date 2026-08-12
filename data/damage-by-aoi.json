@@ -1,7 +1,7 @@
 {
   "meta": {
     "code": "EMSR916",
-    "fetchedAt": "2026-08-11T09:08:36.487Z",
+    "fetchedAt": "2026-08-12T07:05:24.214Z",
     "gradeOrder": [
       "Destroyed",
       "Damaged",
@@ -11,6 +11,56 @@
     ],
     "note": "Conteos edificio a edificio del campo `damage_gra` (Grading). 'affected' = todo lo distinto de Not Applicable."
   },
-  "totals": {},
-  "aois": []
+  "totals": {
+    "Destroyed": 86,
+    "Damaged": 91,
+    "Possibly damaged": 26
+  },
+  "aois": [
+    {
+      "aoi": "Northern Cali",
+      "aoiNumber": 1,
+      "layer": "EMSR916_AOI01_GRA_PRODUCT_builtUpP_v1_VT",
+      "slug": "northern-cali",
+      "buildings": 7,
+      "byGrade": {
+        "Destroyed": 2,
+        "Damaged": 3,
+        "Possibly damaged": 2
+      },
+      "byType": {
+        "Residential": 7
+      }
+    },
+    {
+      "aoi": "Pereira",
+      "aoiNumber": 2,
+      "layer": "EMSR916_AOI02_GRA_PRODUCT_builtUpP_v1_VT",
+      "slug": "pereira",
+      "buildings": 182,
+      "byGrade": {
+        "Destroyed": 76,
+        "Damaged": 85,
+        "Possibly damaged": 21
+      },
+      "byType": {
+        "Residential": 182
+      }
+    },
+    {
+      "aoi": "Cali Center",
+      "aoiNumber": 3,
+      "layer": "EMSR916_AOI03_GRA_PRODUCT_builtUpP_v1_VT",
+      "slug": "cali-center",
+      "buildings": 14,
+      "byGrade": {
+        "Destroyed": 8,
+        "Damaged": 3,
+        "Possibly damaged": 3
+      },
+      "byType": {
+        "Residential": 14
+      }
+    }
+  ]
 }

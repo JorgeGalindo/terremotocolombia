@@ -13,91 +13,162 @@
     "closed": false,
     "productsZip": "https://rapidmapping.emergency.copernicus.eu/backend/EMSR916/EMSR916_products.zip",
     "awsBucket": "https://rapidmapping-viewer.s3.eu-west-1.amazonaws.com",
-    "fetchedAt": "2026-08-11T09:08:35.969Z",
+    "fetchedAt": "2026-08-12T07:05:22.214Z",
     "source": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations/?code=EMSR916"
   },
   "totals": {
-    "aois": 3,
-    "delivered": 0,
-    "notFeasible": 3,
-    "identifiedBuildings": "-"
+    "aois": 4,
+    "delivered": 3,
+    "notFeasible": 1,
+    "identifiedBuildings": 203
   },
   "aois": [
     {
-      "name": "Northen Cali",
-      "number": 1,
+      "name": "Western Colombia",
+      "number": 0,
       "status": "not_feasible",
       "population": null,
       "lastDelivery": null,
       "products": [
         {
-          "type": "GRA",
+          "type": "GRM",
           "monitoring": false,
           "monitoringNumber": 0,
           "status": "W",
           "statusReason": null,
           "versionNumber": 1,
-          "expectedDelivery": "2026-08-12T04:28:00",
+          "expectedDelivery": "2026-08-16T13:48:00",
           "deliveryTime": null,
           "mapsCount": 0,
           "sensors": [
-            "Pleiades Neo"
+            "Sentinel-1"
           ],
-          "lastImageAcquisition": "2026-08-11T15:28:00",
+          "lastImageAcquisition": "2026-08-14T10:48:00",
           "population": null,
           "stats": []
+        }
+      ]
+    },
+    {
+      "name": "Northern Cali",
+      "number": 1,
+      "status": "delivered",
+      "population": 340000,
+      "lastDelivery": "2026-08-12T03:31:36.584963",
+      "products": [
+        {
+          "type": "GRA",
+          "monitoring": false,
+          "monitoringNumber": 0,
+          "status": "delivered",
+          "statusReason": null,
+          "versionNumber": 1,
+          "expectedDelivery": "2026-08-12T05:36:00",
+          "deliveryTime": "2026-08-12T03:31:36.584963",
+          "mapsCount": 2,
+          "sensors": [
+            "Pleiades"
+          ],
+          "lastImageAcquisition": "2026-08-11T15:31:00",
+          "population": 340000,
+          "stats": [
+            {
+              "category": "Built-up",
+              "subclass": "Residential Buildings",
+              "unit": "",
+              "total": 11788,
+              "affected": 7
+            }
+          ]
         }
       ]
     },
     {
       "name": "Pereira",
       "number": 2,
-      "status": "not_feasible",
-      "population": null,
-      "lastDelivery": null,
+      "status": "delivered",
+      "population": 190000,
+      "lastDelivery": "2026-08-12T05:18:20.823334",
       "products": [
         {
           "type": "GRA",
           "monitoring": false,
           "monitoringNumber": 0,
-          "status": "W",
+          "status": "delivered",
           "statusReason": null,
           "versionNumber": 1,
-          "expectedDelivery": "2026-08-12T04:27:00",
-          "deliveryTime": null,
-          "mapsCount": 0,
+          "expectedDelivery": "2026-08-12T04:37:00",
+          "deliveryTime": "2026-08-12T05:18:20.823334",
+          "mapsCount": 4,
           "sensors": [
-            "Pleiades Neo"
+            "Pleiades"
           ],
-          "lastImageAcquisition": "2026-08-11T15:27:00",
-          "population": null,
-          "stats": []
+          "lastImageAcquisition": "2026-08-11T15:31:00",
+          "population": 190000,
+          "stats": [
+            {
+              "category": "Built-up",
+              "subclass": "Residential Buildings",
+              "unit": "count",
+              "total": "NA",
+              "affected": 182
+            },
+            {
+              "category": "Transportation",
+              "subclass": "Local Road",
+              "unit": "km",
+              "total": 185.7,
+              "affected": 0.6
+            },
+            {
+              "category": "Transportation",
+              "subclass": "Secondary Road",
+              "unit": "km",
+              "total": 41.4,
+              "affected": 0.2
+            },
+            {
+              "category": "Blocked road / interruption",
+              "subclass": null,
+              "unit": "count",
+              "total": "NA",
+              "affected": 11
+            }
+          ]
         }
       ]
     },
     {
       "name": "Cali Center",
       "number": 3,
-      "status": "not_feasible",
-      "population": null,
-      "lastDelivery": null,
+      "status": "delivered",
+      "population": 94000,
+      "lastDelivery": "2026-08-12T03:48:40.818287",
       "products": [
         {
           "type": "GRA",
           "monitoring": false,
           "monitoringNumber": 0,
-          "status": "W",
+          "status": "delivered",
           "statusReason": null,
           "versionNumber": 1,
-          "expectedDelivery": "2026-08-12T04:28:00",
-          "deliveryTime": null,
-          "mapsCount": 0,
+          "expectedDelivery": "2026-08-12T04:52:00",
+          "deliveryTime": "2026-08-12T03:48:40.818287",
+          "mapsCount": 1,
           "sensors": [
             "Pleiades"
           ],
-          "lastImageAcquisition": "2026-08-11T15:28:00",
-          "population": null,
-          "stats": []
+          "lastImageAcquisition": "2026-08-11T15:31:00",
+          "population": 94000,
+          "stats": [
+            {
+              "category": "Built-up",
+              "subclass": "Residential Buildings",
+              "unit": "count",
+              "total": "NA",
+              "affected": 14
+            }
+          ]
         }
       ]
     }
