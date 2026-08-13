@@ -1,7 +1,7 @@
 {
   "meta": {
     "code": "EMSR916",
-    "fetchedAt": "2026-08-12T07:05:24.214Z",
+    "fetchedAt": "2026-08-13T07:09:16.358Z",
     "gradeOrder": [
       "Destroyed",
       "Damaged",
@@ -12,9 +12,9 @@
     "note": "Conteos edificio a edificio del campo `damage_gra` (Grading). 'affected' = todo lo distinto de Not Applicable."
   },
   "totals": {
-    "Destroyed": 86,
-    "Damaged": 91,
-    "Possibly damaged": 26
+    "Destroyed": 197,
+    "Damaged": 210,
+    "Possibly damaged": 52
   },
   "aois": [
     {
@@ -60,6 +60,22 @@
       },
       "byType": {
         "Residential": 14
+      }
+    },
+    {
+      "aoi": "Buenaventura",
+      "aoiNumber": 6,
+      "layer": "EMSR916_AOI06_GRA_PRODUCT_builtUpP_v1_VT",
+      "slug": "buenaventura",
+      "buildings": 256,
+      "byGrade": {
+        "Destroyed": 111,
+        "Damaged": 119,
+        "Possibly damaged": 26
+      },
+      "byType": {
+        "Residential": 246,
+        "Non residential": 10
       }
     }
   ]
