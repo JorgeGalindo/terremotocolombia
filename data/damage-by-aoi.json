@@ -1,7 +1,7 @@
 {
   "meta": {
     "code": "EMSR916",
-    "fetchedAt": "2026-08-13T07:09:16.358Z",
+    "fetchedAt": "2026-08-14T07:05:46.451Z",
     "gradeOrder": [
       "Destroyed",
       "Damaged",
@@ -12,9 +12,9 @@
     "note": "Conteos edificio a edificio del campo `damage_gra` (Grading). 'affected' = todo lo distinto de Not Applicable."
   },
   "totals": {
-    "Destroyed": 197,
-    "Damaged": 210,
-    "Possibly damaged": 52
+    "Destroyed": 239,
+    "Damaged": 275,
+    "Possibly damaged": 108
   },
   "aois": [
     {
@@ -63,19 +63,47 @@
       }
     },
     {
-      "aoi": "Buenaventura",
-      "aoiNumber": 6,
-      "layer": "EMSR916_AOI06_GRA_PRODUCT_builtUpP_v1_VT",
-      "slug": "buenaventura",
-      "buildings": 256,
+      "aoi": "Quibdo Centre",
+      "aoiNumber": 4,
+      "layer": "EMSR916_AOI04_GRA_PRODUCT_builtUpP_v1_VT",
+      "slug": "quibdo-centre",
+      "buildings": 74,
       "byGrade": {
-        "Destroyed": 111,
-        "Damaged": 119,
-        "Possibly damaged": 26
+        "Destroyed": 18,
+        "Damaged": 8,
+        "Possibly damaged": 48
       },
       "byType": {
-        "Residential": 246,
-        "Non residential": 10
+        "Residential": 74
+      }
+    },
+    {
+      "aoi": "Istmina",
+      "aoiNumber": 5,
+      "layer": "EMSR916_AOI05_GRA_PRODUCT_builtUpP_v1_VT",
+      "slug": "istmina",
+      "buildings": 10,
+      "byGrade": {
+        "Destroyed": 1,
+        "Damaged": 9
+      },
+      "byType": {
+        "Residential": 10
+      }
+    },
+    {
+      "aoi": "Buenaventura",
+      "aoiNumber": 6,
+      "layer": "EMSR916_AOI06_GRA_MONIT01_builtUpP_v1_VT",
+      "slug": "buenaventura",
+      "buildings": 335,
+      "byGrade": {
+        "Destroyed": 134,
+        "Damaged": 167,
+        "Possibly damaged": 34
+      },
+      "byType": {
+        "Residential": 335
       }
     }
   ]
