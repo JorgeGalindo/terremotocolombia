@@ -1,7 +1,7 @@
 {
   "meta": {
     "code": "EMSR916",
-    "fetchedAt": "2026-08-14T07:05:46.451Z",
+    "fetchedAt": "2026-08-15T06:17:59.744Z",
     "gradeOrder": [
       "Destroyed",
       "Damaged",
@@ -94,7 +94,7 @@
     {
       "aoi": "Buenaventura",
       "aoiNumber": 6,
-      "layer": "EMSR916_AOI06_GRA_MONIT01_builtUpP_v1_VT",
+      "layer": "EMSR916_AOI06_GRA_MONIT01_builtUpP_v2_VT",
       "slug": "buenaventura",
       "buildings": 335,
       "byGrade": {
@@ -103,7 +103,8 @@
         "Possibly damaged": 34
       },
       "byType": {
-        "Residential": 335
+        "Residential": 322,
+        "Non residential": 13
       }
     }
   ]
