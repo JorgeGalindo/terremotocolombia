@@ -2,7 +2,7 @@
   "meta": {
     "code": "EMSR916",
     "name": "Earthquake in Colombia",
-    "reason": "On the 10 August 2026 at 12:30 UTC, a major earthquake with a magnitude of 7.4 is reported to have affected western and central Colombia, with the epicentre near San José del Palmar. The event has caused significant damage in several cities, including Quibdó, Pereira, Manizales and Cali, with collapsed buildings reported. Copernicus EMS Rapid Mapping is requested to provide earthquake damage assessment emergency mapping.",
+    "reason": "On the 10 August 2026 at 12:30 UTC, a major earthquake with a magnitude of 7.4 affected western and central Colombia, with the epicentre near San José del Palmar. The event caused significant damage in several cities, including Quibdó, Pereira, Manizales and Cali, with collapsed buildings reported. Copernicus EMS Rapid Mapping was requested to provide earthquake damage assessment emergency mapping.",
     "category": "Earthquake / Ground shaking",
     "activator": "EC Services|DG ECHO",
     "eventTime": "2026-08-10T12:30:00",
@@ -10,10 +10,10 @@
     "gdacsId": "EQ1557236",
     "charterNumber": "1048",
     "reportLink": "https://storymaps.arcgis.com/stories/faac12172e564e31b558b1dff08c91d6",
-    "closed": false,
+    "closed": true,
     "productsZip": "https://rapidmapping.emergency.copernicus.eu/backend/EMSR916/EMSR916_products.zip",
     "awsBucket": "https://rapidmapping-viewer.s3.eu-west-1.amazonaws.com",
-    "fetchedAt": "2026-08-17T06:30:49.852Z",
+    "fetchedAt": "2026-08-18T06:22:45.860Z",
     "source": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations/?code=EMSR916"
   },
   "totals": {
@@ -34,11 +34,11 @@
           "type": "GRM",
           "monitoring": false,
           "monitoringNumber": 0,
-          "status": "W",
-          "statusReason": null,
+          "status": "not_feasible",
+          "statusReason": "Because of remote sensing limitations",
           "versionNumber": 1,
-          "expectedDelivery": "2026-08-16T13:48:00",
-          "deliveryTime": null,
+          "expectedDelivery": null,
+          "deliveryTime": "2026-08-17T10:24:00",
           "mapsCount": 0,
           "sensors": [
             "Sentinel-1"
@@ -190,8 +190,8 @@
           "deliveryTime": "2026-08-14T00:48:04.123420",
           "mapsCount": 1,
           "sensors": [
-            "Pleiades Neo",
-            "SkySat"
+            "SkySat",
+            "Pleiades Neo"
           ],
           "lastImageAcquisition": "2026-08-13T15:41:00",
           "population": 73000,
@@ -257,38 +257,6 @@
       "products": [
         {
           "type": "GRA",
-          "monitoring": false,
-          "monitoringNumber": 0,
-          "status": "delivered",
-          "statusReason": null,
-          "versionNumber": 1,
-          "expectedDelivery": "2026-08-13T04:30:00",
-          "deliveryTime": "2026-08-13T02:39:52.991802",
-          "mapsCount": 3,
-          "sensors": [
-            "Pleiades Neo"
-          ],
-          "lastImageAcquisition": "2026-08-11T15:54:00",
-          "population": 320000,
-          "stats": [
-            {
-              "category": "Built-up",
-              "subclass": "Residential Buildings",
-              "unit": "count",
-              "total": "NA",
-              "affected": 246
-            },
-            {
-              "category": "Built-up",
-              "subclass": "Other non-residential buildings",
-              "unit": "count",
-              "total": "NA",
-              "affected": 10
-            }
-          ]
-        },
-        {
-          "type": "GRA",
           "monitoring": true,
           "monitoringNumber": 1,
           "status": "delivered",
@@ -323,6 +291,38 @@
               "unit": "count",
               "total": "NA",
               "affected": 2
+            }
+          ]
+        },
+        {
+          "type": "GRA",
+          "monitoring": false,
+          "monitoringNumber": 0,
+          "status": "delivered",
+          "statusReason": null,
+          "versionNumber": 1,
+          "expectedDelivery": "2026-08-13T04:30:00",
+          "deliveryTime": "2026-08-13T02:39:52.991802",
+          "mapsCount": 3,
+          "sensors": [
+            "Pleiades Neo"
+          ],
+          "lastImageAcquisition": "2026-08-11T15:54:00",
+          "population": 320000,
+          "stats": [
+            {
+              "category": "Built-up",
+              "subclass": "Residential Buildings",
+              "unit": "count",
+              "total": "NA",
+              "affected": 246
+            },
+            {
+              "category": "Built-up",
+              "subclass": "Other non-residential buildings",
+              "unit": "count",
+              "total": "NA",
+              "affected": 10
             }
           ]
         }
