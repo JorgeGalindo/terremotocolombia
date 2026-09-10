@@ -16,13 +16,13 @@
     "origenRevision": "confirmed",
     "pagerRevision": "automatic",
     "fuentes": {
-      "sacudida": "https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:shakemap:us6000tjl2:1788821766631/contents/download/grid.xml",
-      "nucleos": "https://earthquake.usgs.gov/pdl/products/urn:usgs-product:us:losspager:us6000tjl2:1788821915886/contents/json/cities.json",
+      "sacudida": "https://earthquake.usgs.gov/product/shakemap/us6000tjl2/us/1788821766631/download/grid.xml",
+      "nucleos": "https://earthquake.usgs.gov/product/losspager/us6000tjl2/us/1788821915886/json/cities.json",
       "divipola": "https://www.datos.gov.co/resource/pqwj-3fi4.json?$limit=2000",
       "deficit": "DANE, Déficit habitacional CNPV 2018 — deficit-hab-2020-anexo-nueva-metodologia.xlsx, hoja 'Total Municipios'"
     },
     "advertencia": "El déficit habitacional mide carencias de la vivienda (materiales, hacinamiento, servicios), NO vulnerabilidad sísmica. Correlaciona con ella, no la sustituye. Dato de 2018.",
-    "fetchedAt": "2026-09-09T10:17:45.351Z"
+    "fetchedAt": "2026-09-10T10:11:16.946Z"
   },
   "resumen": [
     {
