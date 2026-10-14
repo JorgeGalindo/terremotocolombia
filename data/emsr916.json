@@ -13,7 +13,7 @@
     "closed": true,
     "productsZip": "https://rapidmapping.emergency.copernicus.eu/backend/EMSR916/EMSR916_products.zip",
     "awsBucket": "https://rapidmapping-viewer.s3.eu-west-1.amazonaws.com",
-    "fetchedAt": "2026-10-13T13:05:35.207Z",
+    "fetchedAt": "2026-10-14T10:46:50.904Z",
     "source": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations/?code=EMSR916"
   },
   "totals": {
